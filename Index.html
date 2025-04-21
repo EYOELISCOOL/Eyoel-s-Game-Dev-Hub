@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eyoel's Game Dev Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-purple-400">
+                <i class="fas fa-gamepad mr-2"></i>Eyoel's Hub
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link active"><i class="fas fa-home mr-1"></i> Home</a>
+                <a href="#upload" class="nav-link"><i class="fas fa-upload mr-1"></i> Upload</a>
+                <a href="#community" class="nav-link"><i class="fas fa-users mr-1"></i> Community</a>
+                <a href="#profile" class="nav-link"><i class="fas fa-user mr-1"></i> Profile</a>
+                <button id="authBtn" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded transition">
+                    Login
+                </button>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-gray-700 p-4 mt-2 rounded-lg">
+            <div class="flex flex-col space-y-3" id="mobileNavLinks"></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 px-4 min-h-screen" id="mainContent">
+        <!-- Pages load here dynamically -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto text-center">
+            <p>© 2023 Eyoel's Game Dev Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+
+    <!-- App JS -->
+    <script src="./app.js"></script>
+</body>
+</html>

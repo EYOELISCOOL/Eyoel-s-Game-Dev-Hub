@@ -1,0 +1,132 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Navigation */
+.nav-link {
+    @apply px-3 py-2 rounded transition;
+}
+.nav-link.active {
+    @apply bg-purple-600 text-white;
+}
+.nav-link-mobile {
+    @apply block px-3 py-2 rounded hover:bg-gray-600;
+}
+
+/* Buttons */
+.btn-primary {
+    @apply bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition;
+}
+.btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition;
+}
+
+/* Cards */
+.community-card {
+    @apply bg-gray-800 rounded-xl p-6 text-center hover:bg-gray-700 transition;
+}
+.community-card i {
+    @apply text-purple-400;
+}
+.community-card h3 {
+    @apply text-xl font-bold my-2;
+}
+
+/* Upload Form */
+.upload-container {
+    @apply shadow-lg;
+}
+.input-field {
+    @apply bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500;
+}
+#dropZone {
+    @apply border-2 border-dashed border-gray-600 rounded-lg p-8 text-center cursor-pointer transition mb-2;
+}
+#dropZone.drag-over {
+    @apply border-purple-500 bg-purple-900 bg-opacity-20;
+}
+.file-name-display {
+    @apply mt-2 text-purple-400 hidden;
+}
+.progress-track {
+    @apply w-full bg-gray-700 rounded-full h-2 overflow-hidden;
+}
+.progress-bar {
+    @apply h-full bg-purple-500 rounded-full transition-all;
+}
+
+/* Profile */
+.avatar-circle {
+    @apply w-24 h-24 rounded-full bg-purple-600 flex items-center justify-center text-3xl font-bold text-white;
+}
+.stat-card {
+    @apply bg-gray-700 rounded-lg p-4 text-center;
+}
+.stat-number {
+    @apply text-2xl font-bold text-purple-400;
+}
+.stat-label {
+    @apply text-sm text-gray-400;
+}
+
+/* Animations */
+.page-content {
+    animation: fadeIn 0.3s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        @apply p-6;
+    }
+    .hero h1 {
+        @apply text-3xl;
+    }
+}
+/* Premium Assets Styling */
+.hero-section {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .asset-card {
+    @apply bg-gray-800 rounded-xl overflow-hidden transition-transform hover:scale-[1.02];
+  }
+  
+  .asset-thumbnail {
+    @apply h-48 bg-gray-700 bg-center bg-cover flex items-end;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  }
+  
+  .asset-details {
+    @apply p-4;
+  }
+  
+  .asset-details h3 {
+    @apply font-bold text-lg mb-1;
+  }
+  
+  .asset-footer {
+    @apply flex justify-between items-center mt-3;
+  }
+  
+  .badge {
+    @apply bg-gray-700 text-xs px-2 py-1 rounded;
+  }
+  
+  .download-btn {
+    @apply bg-purple-600 hover:bg-purple-700 px-3 py-1 rounded text-sm flex items-center gap-1;
+  }
+  
+  /* Owner Special Features */
+  .owner-badge {
+    @apply absolute top-2 right-2 bg-yellow-500 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full;
+  }
+  

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login or Signup for EyoArc">
+    <title>Authentication | EyoArc</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dark-mode.css" id="darkModeStyle" disabled>
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="icon" href="./images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header class="main-header">
+        <div class="container">
+            <a href="./index.html" class="logo-link">
+                <img src="./images/logo.png" alt="EyoArc Logo" class="site-logo" id="siteLogo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./assets.html">Browse Assets</a></li>
+                    <li><a href="./auth.html" class="active">Login</a></li>
+                    <li><button id="darkModeToggle">Dark Mode</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <h1>Welcome to EyoArc</h1>
+                <p>Login or create an account to download assets, leave comments, and more.</p>
+                
+                <div class="auth-tabs">
+                    <button class="auth-tab active" id="loginTab">Login</button>
+                    <button class="auth-tab" id="signupTab">Sign Up</button>
+                </div>
+                
+                <form id="authForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" id="authButton">Login</button>
+                        <p id="authToggle">Need an account? <a href="#" id="toggleAuth">Sign up</a></p>
+                        <p id="resetPassword"><a href="#">Forgot password?</a></p>
+                    </div>
+                    
+                    <div class="auth-message error" id="authError" style="display:none;"></div>
+                </form>
+                
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+                
+                <div class="social-auth">
+                    <button id="googleAuth" class="google-auth">
+                        <img src="./images/placeholders/google-icon.png" alt="Google Icon">
+                        Continue with Google
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="./images/logo.png" alt="EyoArc Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./assets.html">Browse Assets</a></li>
+                    <li><a href="./auth.html">Login</a></li>
+                    <li><a href="#" id="adminLink" style="display:none;">Admin Panel</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2023 EyoArc. All rights reserved.</p>
+                <p>Assets are for personal and commercial use with proper attribution.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="./js/firebase.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

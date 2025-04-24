@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Asset details on EyoArc">
+    <title>Asset Details | EyoArc</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dark-mode.css" id="darkModeStyle" disabled>
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="icon" href="./images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header class="main-header">
+        <div class="container">
+            <a href="./index.html" class="logo-link">
+                <img src="./images/logo.png" alt="EyoArc Logo" class="site-logo" id="siteLogo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./assets.html">Browse Assets</a></li>
+                    <li><a href="./auth.html" id="authLink">Login</a></li>
+                    <li><button id="darkModeToggle">Dark Mode</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="asset-detail-page">
+        <div class="container">
+            <div id="assetDetail">
+                <!-- Asset details will be loaded here -->
+                <div class="asset-header">
+                    <h1 id="assetTitle">Loading Asset...</h1>
+                    <span class="asset-engine" id="assetEngine"></span>
+                    <div class="asset-meta">
+                        <span id="downloadCount">0 downloads</span>
+                        <span id="assetRating">No ratings yet</span>
+                    </div>
+                </div>
+                
+                <div class="asset-content">
+                    <div class="asset-gallery" id="previewImages">
+                        <!-- Preview images will be loaded here -->
+                        <div class="placeholder-gallery">
+                            <img src="./images/placeholders/loading.jpg" alt="Loading asset previews">
+                        </div>
+                    </div>
+                    
+                    <div class="asset-description">
+                        <h3>Description</h3>
+                        <p id="assetDescription">Loading description...</p>
+                        
+                        <div class="asset-tags" id="assetTags">
+                            <!-- Tags will be loaded here -->
+                        </div>
+                        
+                        <div class="asset-actions">
+                            <button id="downloadBtn" class="download-button">Download Asset</button>
+                            <button id="bookmarkBtn" class="bookmark-button">Bookmark</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="asset-rating">
+                    <h3>Rate this asset</h3>
+                    <div class="rating-stars" id="ratingSection">
+                        <span class="rating-star" data-rating="1">☆</span>
+                        <span class="rating-star" data-rating="2">☆</span>
+                        <span class="rating-star" data-rating="3">☆</span>
+                        <span class="rating-star" data-rating="4">☆</span>
+                        <span class="rating-star" data-rating="5">☆</span>
+                    </div>
+                </div>
+                
+                <div class="asset-comments">
+                    <h3>Comments</h3>
+                    <div id="commentsContainer">
+                        <p>Loading comments...</p>
+                    </div>
+                    
+                    <form id="commentForm" class="comment-form">
+                        <textarea id="commentContent" placeholder="Add a comment..." required></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="./images/logo.png" alt="EyoArc Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./assets.html">Browse Assets</a></li>
+                    <li><a href="./auth.html">Login</a></li>
+                    <li><a href="#" id="adminLink" style="display:none;">Admin Panel</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2023 EyoArc. All rights reserved.</p>
+                <p>Assets are for personal and commercial use with proper attribution.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="./js/firebase.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/assets.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EyoArc - Premium game development assets for Unreal Engine, Unity, and Blender">
+    <title>EyoArc | Game Development Assets</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dark-mode.css" id="darkModeStyle" disabled>
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="icon" href="./images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header class="main-header">
+        <div class="container">
+            <a href="./index.html" class="logo-link">
+                <img src="./images/logo.png" alt="EyoArc Logo" class="site-logo" id="siteLogo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./assets.html">Browse Assets</a></li>
+                    <li><a href="./auth.html" id="authLink">Login</a></li>
+                    <li><button id="darkModeToggle">Dark Mode</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Premium Game Development Assets</h1>
+            <p>High-quality assets for Unreal Engine, Unity, Blender and more</p>
+            <div class="search-container">
+                <input type="text" id="mainSearch" placeholder="Search assets...">
+                <button id="searchButton">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Assets -->
+    <section class="featured-assets">
+        <div class="container">
+            <h2>Featured Assets</h2>
+            <div class="asset-grid" id="featuredAssets">
+                <!-- Dynamically loaded from assets.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Assets -->
+    <section class="trending-assets">
+        <div class="container">
+            <h2>Trending Now</h2>
+            <div class="asset-grid" id="trendingAssets">
+                <!-- Dynamically loaded from assets.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <span class="stat-number" id="totalAssets">0</span>
+                <span class="stat-label">Total Assets</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="totalDownloads">0</span>
+                <span class="stat-label">Total Downloads</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="onlineUsers">0</span>
+                <span class="stat-label">Online Now</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="./images/logo.png" alt="EyoArc Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./assets.html">Browse Assets</a></li>
+                    <li><a href="./auth.html">Login</a></li>
+                    <li><a href="#" id="adminLink" style="display:none;">Admin Panel</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 EyoArc. All rights reserved.</p>
+                <p>Assets are for personal and commercial use with proper attribution.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="./js/firebase.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/assets.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

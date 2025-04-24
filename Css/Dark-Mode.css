@@ -1,0 +1,99 @@
+/* Dark Mode Styles */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.main-header {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+.main-nav ul li a {
+    color: #e0e0e0;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.asset-card, .admin-user-card, .admin-asset-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+}
+
+.asset-title, .asset-engine, .comment-author {
+    color: #e0e0e0;
+}
+
+.asset-description, .comment-date, .asset-meta span {
+    color: #b0b0b0;
+}
+
+.search-container input {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.filters select, .filters input {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.comment-form textarea {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.profile-header {
+    border-bottom: 1px solid #333;
+}
+
+.danger-zone {
+    border: 1px solid #ff4444;
+    background-color: #2d1e1e;
+}
+
+/* Admin Dashboard */
+.admin-tab-content {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+}
+
+.stat-card {
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+}
+
+.upload-form input, 
+.upload-form select, 
+.upload-form textarea {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+/* Auth Page */
+.auth-container {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+}
+
+.auth-form input {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.google-auth {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.google-auth:hover {
+    background-color: #3d3d3d;
+}
